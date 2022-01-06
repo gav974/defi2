@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -31,12 +31,52 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-            Text('jojo',style: GoogleFonts.pacifico(
-              fontSize: 38,
-              fontWeight: FontWeight.w400,
-              color: Colors.white,
-            ),
-            )
+              Container(
+                child: Text(
+                  'Jojo',
+                  style: GoogleFonts.pacifico(
+                      textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          shadows: [
+                        const Shadow(
+                            blurRadius: 1.0,
+                            color: Colors.black,
+                            offset: const Offset(1.0, 2.0))
+                      ])),
+                ),
+              ),
+              Container(
+                  child: Text(
+                'Web Developpeur jr',
+                style: GoogleFonts.sourceSansPro(
+                    textStyle: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  letterSpacing: 2,
+                  fontWeight: FontWeight.bold,
+                        shadows: [
+                      const Shadow(
+                          blurRadius: 2.0,
+                          color: Colors.black,
+                          offset: const Offset(1.0, 2.0))
+                    ]
+                )),
+              )),
+              Container(
+                child: const Divider(
+                  thickness: 1,
+                  indent: 50,
+                  endIndent: 50,
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: [
+
+                  ],
+                ),
+              )
             ],
           ))),
     );
